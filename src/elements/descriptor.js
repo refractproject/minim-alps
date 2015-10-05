@@ -7,18 +7,18 @@ export default function(namespace) {
       this.element = 'descriptor';
     }
 
-    addDoc(callback) {
+    addDoc() {
       const DocClass = namespace.getElementClass('doc');
       const doc = new DocClass();
       this.push(doc);
-      return callback(null, doc);
+      return doc;
     }
 
-    addDescriptor(callback) {
+    addDescriptor() {
       const DescriptorClass = namespace.getElementClass('descriptor');
       const descriptor = new DescriptorClass();
       this.push(descriptor);
-      return callback(null, descriptor);
+      return descriptor;
     }
   }
 

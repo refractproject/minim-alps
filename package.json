@@ -1,6 +1,6 @@
 {
   "name": "minim-alps",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Minim ALPS Namespace",
   "main": "./lib/alps.js",
   "repository": {

@@ -52,12 +52,10 @@ describe('ALPS namespace', () => {
       context('#addDoc', () => {
         let element;
 
-        before((done) => {
+        before(() => {
           element = new ElementClass();
-          element.addDoc((error, doc) => {
-            doc.set('This is a doc.');
-            done();
-          });
+          let doc = element.addDoc();
+          doc.set('This is a doc.');
         });
 
         it('should have the correct number of doc elements', () => {
@@ -69,12 +67,9 @@ describe('ALPS namespace', () => {
       context('#addDescriptor', () => {
         let element;
 
-        before((done) => {
+        before(() => {
           element = new ElementClass();
-          element.addDescriptor((error, descriptor) => {
-            descriptor.id = 'foobar';
-            done();
-          });
+          let descriptor = element.addDescriptor();
         });
 
         it('should have the correct number of descriptor elements', () => {
