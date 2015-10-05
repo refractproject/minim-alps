@@ -46,29 +46,24 @@ let alpsDoc = namespace.fromCompactRefract(compactRefract);
 
 // Initialize elements directly
 const Alps = namespace.getElementClass('alps');
-let alps = new Alps();
+const alps = new Alps();
 
 // Set version
 alps.attributes.set('version', '1.0');
 
-alps.addDoc((error, doc) => {
-  doc.attributes.set('type', 'text');
-  doc.set('A contact list.');
-});
+const doc = alps.addDoc();
+doc.attributes.set('type', 'text');
+doc.set('A contact list.');
 
-alps.addDescriptor((error, collection) => {
-  collection.id = 'collection';
-  collection.attributes.set({type: 'safe', rt: 'contact'});
+const collection = alps.addDescriptor();
+collection.id = 'collection';
+collection.attributes.set({type: 'safe', rt: 'contact'});
 
-  collection.addDoc((error, doc) => {
-    doc.set('A simple link/form for getting a list of contacts.');
-  });
+const collectionDoc = collection.addDoc();
+doc.set('A simple link/form for getting a list of contacts.');
 
-  collection.addDescriptor((error, nameSearch) => {
-    nameSearch.attributes.set('type', 'safe');
-    nameSearch.addDoc
-  });
-});
+const nameSearch = collection.addDescriptor();
+nameSearch.attributes.set('type', 'safe');
 ```
 
 ## Element Reference
