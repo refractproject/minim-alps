@@ -1,8 +1,0 @@
-src/
-.travis.yml
-circle.yml
-.git*
-coverage
-.vagrant
-.npmignore
-.eslintcache

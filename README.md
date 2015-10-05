@@ -49,9 +49,23 @@ let alps = new Alps();
 // Set version
 alps.attributes.set('version', '1.0');
 
-// Add doc element to document
 alps.addDoc((error, doc) => {
-  doc.set('The value of the doc.');
+  doc.attributes.set('type', 'text');
+  doc.set('A contact list.');
+});
+
+alps.addDescriptor((error, collection) => {
+  collection.id = 'collection';
+  collection.attributes.set({type: 'safe', rt: 'contact'});
+
+  collection.addDoc((error, doc) => {
+    doc.set('A simple link/form for getting a list of contacts.');
+  });
+
+  collection.addDescriptor((error, nameSearch) => {
+    nameSearch.attributes.set('type', 'safe');
+    nameSearch.addDoc
+  });
 });
 ```
 
