@@ -54,7 +54,7 @@ describe('ALPS namespace', () => {
 
         before(() => {
           element = new ElementClass();
-          let doc = element.addDoc();
+          const doc = element.addDoc();
           doc.set('This is a doc.');
         });
 
@@ -69,7 +69,7 @@ describe('ALPS namespace', () => {
 
         before(() => {
           element = new ElementClass();
-          let descriptor = element.addDescriptor();
+          element.addDescriptor();
         });
 
         it('should have the correct number of descriptor elements', () => {
