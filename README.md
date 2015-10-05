@@ -1,5 +1,7 @@
 # Minim ALPS
 
+[![Build Status](https://travis-ci.org/refractproject/minim-alps.svg?branch=master)](https://travis-ci.org/refractproject/minim-alps)
+
 This library provides an interface to the Refract ALPS. It extends upon the base types as defined in [Minim](https://github.com/refractproject/minim).
 
 ## Install
