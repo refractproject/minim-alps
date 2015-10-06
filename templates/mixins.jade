@@ -1,0 +1,13 @@
+mixin element_content(element)
+  each item in element.content
+    if item.element === 'doc'
+      include ./doc.jade
+    else if item.element === 'descriptor'
+      include ./descriptor.jade
+      
+mixin element_attributes(element)
+  if element.attributes.length > 0
+    dl
+      each attribute in element.attributes.content
+        dt.attribute-key= attribute.key.toValue()
+        dd.attribute-value= attribute.value.toValue()
