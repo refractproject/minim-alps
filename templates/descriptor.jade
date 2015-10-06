@@ -1,0 +1,8 @@
+if item.id
+  section.descriptor(id=item.id)
+    .panel.panel-info
+      .panel-heading
+        h1.panel-title Descriptor: #{item.id}
+      .panel-body
+        +element_attributes(item)
+        +element_content(item)

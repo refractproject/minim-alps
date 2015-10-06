@@ -1,0 +1,9 @@
+- var itemFormat = item.attributes.getValue('format') || 'text'
+
+if itemFormat === 'text' || itemFormat === 'markdown'
+  .doc(data-alps-format='text')
+    :marked
+      #{item.toValue()}
+else if itemFormat === 'html'
+  .doc(data-alps-format='html')
+    = item.toValue()

@@ -1,6 +1,6 @@
 {
   "name": "minim-alps",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Minim ALPS Namespace",
   "main": "./lib/alps.js",
   "repository": {
@@ -9,7 +9,12 @@
   },
   "dependencies": {
     "babel-runtime": "^5.8.25",
-    "minim": "^0.11.0"
+    "install": "^0.1.8",
+    "jade": "^1.11.0",
+    "jstransformer-marked": "^1.0.1",
+    "marked": "^0.3.5",
+    "minim": "^0.11.0",
+    "npm": "^3.3.5"
   },
   "devDependencies": {
     "chai": "^3.2.0",

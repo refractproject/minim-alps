@@ -5,9 +5,9 @@
 import {expect} from 'chai';
 
 import minim from 'minim';
-import alpsElements from '../src/alps';
+import alpsNamespace from '../src/alps';
 
-const namespace = minim.namespace().use(alpsElements);
+const namespace = minim.namespace().use(alpsNamespace);
 
 const Alps = namespace.getElementClass('alps');
 const Descriptor = namespace.getElementClass('descriptor');

@@ -24,22 +24,22 @@ const namespace = minim
 // Converted from http://tools.ietf.org/html/draft-amundsen-richardson-foster-alps-01
 let compactRefract = [
   'alps', {}, {version: '1.0'}, [
-    ['doc', {}, {type: 'text'}, 'A contact list.',
+    ['doc', {}, {format: 'text'}, 'A contact list.'],
     ['descriptor', {id:'collection'}, {type: 'safe', rt: 'contact'}, [
       ['doc', {}, {}, 'A simple link/form for getting a list of contacts.'],
-      ['descriptor', {id: 'nameSearch'}, {type: 'safe'}, [
+      ['descriptor', {id: 'nameSearch'}, {type: 'semantic'}, [
         ['doc', {}, {}, 'Input for a search form.']
       ]]
     ]],
-    ['descriptor', {id:'contact'}, {type: 'safe'}, [
+    ['descriptor', {id:'contact'}, {type: 'semantic'}, [
       ['descriptor', {id: 'item'}, {type: 'safe'}, [
         ['doc', {}, {}, 'A link to an individual contact.'],
-        ['descriptor', {id:'fullName'}, {type: 'safe'}, []],
-        ['descriptor', {id:'email'}, {type: 'safe'}, []]
-        ['descriptor', {id:'phone'}, {type: 'safe'}, []]
+        ['descriptor', {id:'fullName'}, {type: 'semantic'}, []],
+        ['descriptor', {id:'email'}, {type: 'semantic'}, []],
+        ['descriptor', {id:'phone'}, {type: 'semantic'}, []]
       ]]
     ]]
-  ]]
+  ]
 ];
 
 let alpsDoc = namespace.fromCompactRefract(compactRefract);
@@ -63,7 +63,7 @@ const collectionDoc = collection.addDoc();
 doc.set('A simple link/form for getting a list of contacts.');
 
 const nameSearch = collection.addDescriptor();
-nameSearch.attributes.set('type', 'safe');
+nameSearch.attributes.set('type', 'semantic');
 ```
 
 ## Element Reference
