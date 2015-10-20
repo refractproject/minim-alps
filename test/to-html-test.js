@@ -41,7 +41,7 @@ describe('ALPS namespace', () => {
     // Simple checks to ensure the content is being rendered
     it('should render correctly', () => {
       const alpsHtml = alpsToHtml(alps);
-      expect(alpsHtml).to.include('A contact list.');
+      expect(alpsHtml).to.include('<pre>A contact list.</pre>');
       expect(alpsHtml).to.include('id="collection"');
       expect(alpsHtml).to.include('A simple link/form for getting a list of contacts.');
       expect(alpsHtml).to.include('<dt class="attribute-key">type</dt><dd class="attribute-value">safe</dd>');
