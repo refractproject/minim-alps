@@ -6,3 +6,5 @@ if item.id
       .panel-body
         +element_attributes(item)
         +element_content(item)
+else
+  a.btn.btn-primary(href=item.attributes.getValue('href'))= item.href

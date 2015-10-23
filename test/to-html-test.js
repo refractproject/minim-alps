@@ -32,6 +32,7 @@ describe('ALPS namespace', () => {
               ['descriptor', {id: 'fullName'}, {type: 'semantic'}, []],
               ['descriptor', {id: 'email'}, {type: 'semantic'}, []],
               ['descriptor', {id: 'phone'}, {type: 'semantic'}, []],
+              ['descriptor', {}, { href: 'http://example.com/FooBar'}, []],
             ]],
           ]],
         ],
@@ -45,6 +46,7 @@ describe('ALPS namespace', () => {
       expect(alpsHtml).to.include('id="collection"');
       expect(alpsHtml).to.include('A simple link/form for getting a list of contacts.');
       expect(alpsHtml).to.include('<dt class="attribute-key">type</dt><dd class="attribute-value">safe</dd>');
+      expect(alpsHtml).to.include('href="http://example.com/FooBar"');
     });
   });
 });
