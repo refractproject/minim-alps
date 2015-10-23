@@ -47,6 +47,7 @@ describe('ALPS namespace', () => {
       expect(alpsHtml).to.include('A simple link/form for getting a list of contacts.');
       expect(alpsHtml).to.include('<dt class="attribute-key">type</dt><dd class="attribute-value">safe</dd>');
       expect(alpsHtml).to.include('href="http://example.com/FooBar"');
+      expect(alpsHtml).to.include('>http://example.com/FooBar</a>');
       expect(alpsHtml).to.include('href="http://example.com/Contact"');
     });
   });
