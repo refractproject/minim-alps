@@ -20,7 +20,7 @@ describe('ALPS namespace', () => {
       alps = namespace.fromCompactRefract([
         'alps', {}, {version: '1.0'}, [
           ['doc', {}, {format: 'text'}, 'A contact list.'],
-          ['descriptor', {id: 'collection'}, {type: 'safe', rt: 'contact'}, [
+          ['descriptor', {id: 'collection'}, {type: 'safe', rt: 'contact', href: 'http://example.com/Contact'}, [
             ['doc', {}, {}, 'A simple link/form for getting a list of contacts.'],
             ['descriptor', {id: 'nameSearch'}, {type: 'semantic'}, [
               ['doc', {}, {}, 'Input for a search form.'],
@@ -47,6 +47,7 @@ describe('ALPS namespace', () => {
       expect(alpsHtml).to.include('A simple link/form for getting a list of contacts.');
       expect(alpsHtml).to.include('<dt class="attribute-key">type</dt><dd class="attribute-value">safe</dd>');
       expect(alpsHtml).to.include('href="http://example.com/FooBar"');
+      expect(alpsHtml).to.include('href="http://example.com/Contact"');
     });
   });
 });

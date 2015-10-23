@@ -10,4 +10,8 @@ mixin element_attributes(element)
     dl
       each attribute in element.attributes.content
         dt.attribute-key= attribute.key.toValue()
-        dd.attribute-value= attribute.value.toValue()
+        dd.attribute-value
+          if attribute.key.toValue() === 'href'
+            a(href=attribute.value.toValue())= attribute.value.toValue()
+          else
+            = attribute.value.toValue()
