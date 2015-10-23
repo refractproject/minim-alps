@@ -7,4 +7,4 @@ if item.id
         +element_attributes(item)
         +element_content(item)
 else
-  a.btn.btn-primary(href=item.attributes.getValue('href'))= item.href
+  a.btn.btn-primary(href=item.attributes.getValue('href'))= item.attributes.getValue('href')
