@@ -1,4 +1,4 @@
-import jade from 'jade';
+import pug from 'pug';
 import path from 'path';
 import cheerio from 'cheerio';
 import _ from 'lodash';
@@ -23,8 +23,8 @@ export function namespace(options) {
  * Convert an ALPS structure into HTML
  */
 export function alpsToHtml(alpsElement) {
-  const alpsFile = path.join(__dirname, '..', 'templates', 'alps.jade');
-  return jade.renderFile(alpsFile, {
+  const alpsFile = path.join(__dirname, '..', 'templates', 'alps.pug');
+  return pug.renderFile(alpsFile, {
     alps: alpsElement,
   });
 }

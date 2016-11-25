@@ -1,9 +1,9 @@
 mixin element_content(element)
   each item in element.content
     if item.element === 'doc'
-      include ./doc.jade
+      include ./doc.pug
     else if item.element === 'descriptor'
-      include ./descriptor.jade
+      include ./descriptor.pug
       
 mixin element_attributes(element)
   if element.attributes.length > 0
