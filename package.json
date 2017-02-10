@@ -16,7 +16,8 @@
     "lodash": "^3.10.1",
     "marked": "^0.3.5",
     "minim": "^0.11.0",
-    "npm": "^3.3.5"
+    "npm": "^3.3.5",
+    "snyk": "^1.25.0"
   },
   "devDependencies": {
     "chai": "^3.2.0",
@@ -30,7 +31,9 @@
     "lint": "peasant lint",
     "peasant": "peasant",
     "ci": "peasant -s lint test build",
-    "prepublish": "npm run ci",
-    "test": "peasant test"
-  }
+    "prepublish": "npm run snyk-protect && npm run ci",
+    "test": "peasant test",
+    "snyk-protect": "snyk protect"
+  },
+  "snyk": true
 }
